@@ -1,0 +1,97 @@
+<!--The whole content below can be removed with the new code.-->
+
+
+<!--<div class="container">-->
+	<!--<router-outlet></router-outlet>-->
+<!--</div>-->
+
+<div [ngClass]="{'layout-wrapper':true,'layout-compact':layoutCompact}">
+
+  <div [ngClass]="{'layout-container':true,'menu-layout-static':(layoutMode=='static'||layoutMode=='horizontal'),
+            'menu-layout-overlay':(layoutMode=='overlay'),'menu-layout-horizontal':(layoutMode=='horizontal')}">
+    <!-- Top Bar -->
+    <div class="topbar clearfix">
+      <div class="topbar-left">
+        <div><br><span style="color: #ffffff; font-size: xx-large">个人娱乐</span></div>
+      </div>
+
+      <div class="topbar-right">
+        <a id="menu-button" href="#">
+          <i></i>
+        </a>
+
+        <a id="topbar-menu-button" href="#">
+          <i class="material-icons">menu</i>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- Menu -->
+    <div [ngClass]="{'layout-menu':true,'layout-menu-dark':darkMenu}">
+      <div class="nano">
+        <div class="nano-content menu-scroll-content">
+          <ul id="main-menu" class="ultima-menu clearfix">
+            <!--<li role="menuitem"><a [routerLink]="['/']"><i class="material-icons">dashboard</i><span>小说</span></a></li>-->
+            <li role="menuitem"><a href="#" class="ripplelink"><span>小说</span><i class="material-icons">keyboard_arrow_down</i></a>
+              <ul role="menu">
+                <li role="menuitem"><a href="#" class="ripplelink" ><span>都市言情</span></a></li>
+                <li role="menuitem"><a href="#" class="ripplelink" ><span>古典武侠</span></a></li>
+                <li role="menuitem"><a href="#" class="ripplelink" ><span>求仙问路</span></a></li>
+                <li role="menuitem"><a href="#" class="ripplelink" ><span>玄幻奇幻</span></a></li>
+                <li role="menuitem"><a href="#" class="ripplelink" ><span>网游竞技</span></a></li>
+                <li role="menuitem"><a href="#" class="ripplelink" ><span>历史架空</span></a></li>
+                <li role="menuitem"><a href="#" class="ripplelink" ><span>经典爽文</span></a></li>
+              </ul>
+            </li>
+            <li role="menuitem"><a href="#" class="ripplelink"><span>图片</span><i class="material-icons">keyboard_arrow_down</i></a>
+              <ul role="menu">
+                <li role="menuitem"><a class="ripplelink" [routerLink]="['/sample']" [routerLinkActive]="['active-menulink']"><span>清纯靓丽</span></a></li>
+                <li role="menuitem"><a class="ripplelink" [routerLink]="['/sample']" [routerLinkActive]="['active-menulink']"><span>性感妩媚</span></a></li>
+                <li role="menuitem"><a class="ripplelink" [routerLink]="['/sample']" [routerLinkActive]="['active-menulink']"><span>心灵震撼</span></a></li>
+                <li role="menuitem"><a class="ripplelink" [routerLink]="['/sample']" [routerLinkActive]="['active-menulink']"><span>怦然心动</span></a></li>
+              </ul>
+            </li>
+            <li id="menuform:um_components" role="menuitem"><a href="#" class="ripplelink"><span>影视</span><i class="material-icons">keyboard_arrow_down</i></a>
+              <ul role="menu">
+                <li role="menuitem"><a class="ripplelink" [routerLink]="['/sample']" [routerLinkActive]="['active-menulink']"><span>激情大片</span></a></li>
+                <li role="menuitem"><a class="ripplelink" [routerLink]="['/sample']" [routerLinkActive]="['active-menulink']"><span>亚洲骑兵</span></a></li>
+                <li role="menuitem"><a class="ripplelink" [routerLink]="['/sample']" [routerLinkActive]="['active-menulink']"><span>亚洲步兵</span></a></li>
+                <li role="menuitem"><a class="ripplelink" [routerLink]="['/sample']" [routerLinkActive]="['active-menulink']"><span>欧美风情</span></a></li>
+                <li role="menuitem"><a class="ripplelink" [routerLink]="['/sample']" [routerLinkActive]="['active-menulink']"><span>变态另类</span></a></li>
+              </ul>
+            </li>
+            <li id="menuform:um_default" role="menuitem"><a href="#" class="ripplelink"><span>收藏</span><i class="material-icons">keyboard_arrow_down</i></a>
+              <ul role="menu">
+                <li role="menuitem"><a class="ripplelink" href="landing.html" target="_blank"><span>Landing</span></a></li>
+              </ul>
+            </li>
+            <li id="menuform:um_defau" role="menuitem"><a href="#" class="ripplelink"><span>管理</span><i class="material-icons">keyboard_arrow_down</i></a>
+              <ul role="menu">
+                <li role="menuitem"><a class="ripplelink"><span>小说管理</span><i class="material-icons">keyboard_arrow_down</i></a>
+                  <ul role="menu">
+                    <li role="menuitem"><a class="ripplelink" [routerLink]="['/root/book_manage']" [routerLinkActive]="['active-menulink']"><i class="material-icons">subject</i><span>添加小说</span></a></li>
+                    <li role="menuitem"><a class="ripplelink" [routerLink]="['/root/book_manage']" [routerLinkActive]="['active-menulink']"><i class="material-icons">subject</i><span>添加章节</span></a></li>
+                  </ul>
+                </li>
+                <li role="menuitem"><a class="ripplelink" [routerLink]="['/sample']" [routerLinkActive]="['active-menulink']"><span>图片管理</span></a></li>
+                <li role="menuitem"><a class="ripplelink" [routerLink]="['/sample']" [routerLinkActive]="['active-menulink']"><span>影视管理</span></a></li>
+              </ul>
+            </li>
+         </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="layout-main">
+      <router-outlet></router-outlet>
+
+      <!--<div class="footer">-->
+        <!--<div class="card clearfix">-->
+          <!--<span class="footer-text-left">PrimeNG ULTIMA for Angular2</span>-->
+          <!--<span class="footer-text-right"><span class="ui-icon ui-icon-copyright"></span>  <span>All Rights Reserved</span></span>-->
+        <!--</div>-->
+      <!--</div>-->
+    </div>
+  </div>
+</div>

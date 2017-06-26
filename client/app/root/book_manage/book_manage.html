@@ -1,0 +1,12 @@
+<div class="ui-fluid text-left">
+  <div class="ui-g-12">
+    <div class="ui-grid-col-4">小说名称：<input  type="text" pInputText [(ngModel)]="name"></div>
+    <div class="ui-grid-col-4">小说作者：<input  type="text" pInputText [(ngModel)]="author"></div>
+    <div class="ui-grid-col-4">小说简介：<input  type="text" pInputText [(ngModel)]="introduction"></div>
+    <div class="ui-grid-col-4">下载地址：<input  type="text" pInputText [(ngModel)]="downloadUrl"></div>
+
+    <div class="ui-grid-col-1 text-right">
+      <button pButton type="button" label="添加小说" (click)="addBook()"></button>
+    </div>
+  </div>
+</div>
