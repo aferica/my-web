@@ -12,12 +12,14 @@ import { routing } from "./app.routing";
 
 import { DoushiComponent } from "./ebook/doushi/doushi.component";
 import { BookManageComponent } from './root/book_manage/book_manage.component';
+import { ChapterManageComponent } from './root/book_manage/chapter_manage.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DoushiComponent,
-    BookManageComponent
+    BookManageComponent,
+    ChapterManageComponent
   ],
   imports: [
     BrowserModule,

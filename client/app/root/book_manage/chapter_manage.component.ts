@@ -7,7 +7,7 @@ import { ChapterManageService } from './chapter_manage.service';
 @Component({
   selector: 'book_manage',
   providers: [ChapterManageService],
-  templateUrl: './book_manage.html'
+  templateUrl: './chapter_manage.html'
 })
 
 export class ChapterManageComponent {
@@ -22,7 +22,7 @@ export class ChapterManageComponent {
     private bms : ChapterManageService
   ) {}
 
-  addBook() {
+  addChapter() {
     let args = {
       name: this.name,
       author: this.author,
