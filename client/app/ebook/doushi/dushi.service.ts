@@ -10,14 +10,20 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class DushiService {
 
-  // private url = 'http://127.0.0.1:5000/api/book/findBook';
-  private headers = new Headers({ 'Content-Type': 'application/json', 'charset': 'UTF-8' });
+  private url = 'http://api.zhuishushenqi.com/book/by-categories';
+  private headers = new Headers({ 
+    'Content-Type': 'application/jsonp',
+    'charset': 'UTF-8', 
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Methods':'GET',
+    'Access-Control-Allow-Headers':'Content-Type' });
   private options = new RequestOptions({ headers: this.headers });
 
   constructor(private http: Http) { }
 
   getBooks(): Observable<any> {
-    return this.http.get('/api/cats').map(res => res.json());
+
+    return this.http.get(this.url + '?major=' + '都市').map(res => res.json());
   }
 
 }

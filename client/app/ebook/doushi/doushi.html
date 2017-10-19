@@ -1,1 +1,16 @@
-<h1>aferica 都市小说</h1>
+<h1>{{books[0].title}}</h1>
+<div>
+
+    <p-dataGrid [value]="books" [paginator]="true" [rows]="20">
+        <ng-template let-book pTemplate="item">
+                <h1>{{books.title}}</h1>
+            <div style="padding:3px" class="ui-g-12 ui-md-3">
+                <div [style]="{'text-align':'center'}">
+                    <img src={{book.cover}} width="60">
+                    <div class="car-detail">{{book.title}} -- {{book.author}} </div>
+                    <hr class="ui-widget-content" style="border-top:0">
+                </div>
+            </div>
+        </ng-template>
+    </p-dataGrid>
+</div>

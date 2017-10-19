@@ -1,0 +1,21 @@
+<div>
+    <p-dataList [value]="bts" [paginator]="true" [rows]="50">
+        <p-header>
+            Test
+        </p-header>
+        <ng-template let-bt pTemplate="item">
+            <div class="ui-g ui-fluid bt-item">
+                <div class="ui-g-12 ui-md-3" style="text-align:center">
+                    <img src={{bt.Img}}>
+                </div>
+                <div class="ui-g-12 ui-md-9 bt-details">
+                    <div class="ui-g">
+                        <div class="ui-g-2 ui-sm-6">VideoID: {{bt.VideoID}}</div>
+                        <div class="ui-g-2 ui-sm-6">ACtress: {{bt.ACtress}}</div>
+                        <div class="ui-g-2 ui-sm-6">Magnet: {{bt.Magnet}}</div>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+    </p-dataList>
+</div>
