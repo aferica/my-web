@@ -1,0 +1,11 @@
+<div>
+  <p-dataGrid [value]="videos" [paginator]="true" [rows]="20">
+    <ng-template let-video pTemplate="item">
+        <div class="ui-g-12 ui-md-4">
+          <img src="{{video.image_url}}" width="100%" (click)="playThisVideo(video.link_url)">
+          <span class="ui-panel-title" style="text-align:center;font-size:16px;display:inline-block;margin-top:2px">{{video.title}}</span>
+          <hr class="ui-widget-content" style="border-top:0">
+        </div>
+    </ng-template>
+  </p-dataGrid>
+</div>

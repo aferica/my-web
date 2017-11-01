@@ -23,10 +23,9 @@ export class DoushiComponent implements OnInit{
 
   getBooks() {
       this.doushiService.getBooks().subscribe (res=> {
-        // console.log(res)
+        console.log(res);
         let temp = {};
         for(let book of res.books) {
-          console.log(book);
           temp = {
             'title': book.title,
             'author': book.author,
@@ -40,7 +39,6 @@ export class DoushiComponent implements OnInit{
             'retentionRatio': book.retentionRatio
           };
           this.books.push(temp);
-          console.log(this.books);
         }
       })
   }

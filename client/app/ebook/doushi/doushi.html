@@ -1,16 +1,37 @@
-<h1>{{books[0].title}}</h1>
-<div>
 
-    <p-dataGrid [value]="books" [paginator]="true" [rows]="20">
+<div>
+    <p-dataList [value]="books">
+        <!-- <ng-template let-book pTemplate="item">
+                <div style="padding:3px" class="ui-g-12 ui-md-3">
+                    <p-panel [header]="book.title" [style]="{'text-align':'center'}">
+                        <img src={{book.cover}} width="60">
+                        <div class="car-author">作者：{{book.author}}</div>
+                        <hr class="ui-widget-content" style="border-top:0">
+                        <div class="car-detail">简介：{{book.shortIntro}}</div>
+                    </p-panel>
+                </div>
+            </ng-template> -->
         <ng-template let-book pTemplate="item">
-                <h1>{{books.title}}</h1>
-            <div style="padding:3px" class="ui-g-12 ui-md-3">
-                <div [style]="{'text-align':'center'}">
-                    <img src={{book.cover}} width="60">
-                    <div class="car-detail">{{book.title}} -- {{book.author}} </div>
-                    <hr class="ui-widget-content" style="border-top:0">
+            <div class="ui-g ui-fluid book-item">
+                <div class="ui-g-12 ui-md-6 ui-lg-3" style="text-align:center">
+                    <img src={{book.cover}} height="240" width="180">
+                </div>
+                <div class="ui-g-12 ui-md-6 ui-lg-9 car-details">
+                    <div class="ui-g">
+                        <div class="ui-g-2 ui-sm-2">作者: </div>
+                        <div class="ui-g-10 ui-sm-10">{{book.title}}</div>
+                        
+                        <div class="ui-g-2 ui-sm-2">作者: </div>
+                        <div class="ui-g-10 ui-sm-10">{{book.author}}</div>
+                        
+                        <div class="ui-g-2 ui-sm-2">最新章节: </div>
+                        <div class="ui-g-10 ui-sm-10">{{book.lastChapter}}</div>
+                        
+                        <div class="ui-g-2 ui-sm-2">简介: </div>
+                        <div class="ui-g-10 ui-sm-10">{{book.shortIntro}}</div>
+                    </div>
                 </div>
             </div>
         </ng-template>
-    </p-dataGrid>
+    </p-dataList>
 </div>
