@@ -1,0 +1,22 @@
+<!-- <div>
+    <p-dataList [value]="pictures" [paginator]="true" [rows]="50">
+      
+        <!-- <ng-template let-picture pTemplate="item"> -->
+            <!-- <div class="ui-g ui-fluid">
+                <div class="ui-g-12 ui-md-12" style="text-align:left;font-size:20px">
+                    <a>{{picture.title}}</a>
+                    <hr class="ui-widget-content" style="border-top:0">
+                </div>
+            </div> -->
+         <!-- </ng-template> -->
+    <!-- </p-dataList>
+</div> -->
+<div>
+    <table class="table table-hover">
+        <tbody *ngFor="let picture of pictures">
+          <tr>
+            <td><a (click)="viewThisPicture(picture._id)">{{picture.title}}</a></td>
+          </tr>
+        </tbody>
+      </table>
+</div>

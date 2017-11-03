@@ -23,7 +23,7 @@ export class DoushiComponent implements OnInit{
 
   getBooks() {
       this.doushiService.getBooks().subscribe (res=> {
-        console.log(res);
+        // console.log(res);
         let temp = {};
         for(let book of res.books) {
           temp = {

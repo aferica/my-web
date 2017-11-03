@@ -20,7 +20,7 @@ export class OnlineComponent implements OnInit {
 
   ngOnInit() {
     this.videoOnlineService.getVideoOnlines().subscribe (res=> {
-      console.log(res);
+      // console.log(res);
       this.videos = res;
     })
   }

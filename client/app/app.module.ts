@@ -18,6 +18,11 @@ import { ChapterManageComponent } from './root/book_manage/chapter_manage.compon
 import { BtComponent } from './video/bt/bt.component';
 import { OnlineComponent } from './video/online/online.component';
 import { PlayerComponent } from './video/player/player.component';
+import { QingchunComponent } from './image/qingchun/qingchun.component';
+import { XingganComponent } from './image/xinggan/xinggan.component';
+import { ZhenhanComponent } from './image/zhenhan/zhenhan.component';
+import { XindongComponent } from './image/xindong/xindong.component';
+import { ViewComponent } from './image/view/view.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +32,12 @@ import { PlayerComponent } from './video/player/player.component';
     ChapterManageComponent,
     BtComponent,
     OnlineComponent,
-    PlayerComponent
+    PlayerComponent,
+    QingchunComponent,
+    XingganComponent,
+    ZhenhanComponent,
+    XindongComponent,
+    ViewComponent
   ],
   imports: [
     BrowserAnimationsModule,
