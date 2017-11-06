@@ -10,7 +10,7 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class DushiService {
 
-  private API = 'http://10.30.4.110:3000/api/getboook/byurl';
+  private API = 'http://182.61.43.39:3000/api/getboook/byurl';
   private headers = new Headers({ 
     'Content-Type': 'application/json',
     'charset': 'UTF-8'});

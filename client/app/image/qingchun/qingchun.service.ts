@@ -7,7 +7,7 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class QingchunService {
 
-  private url = 'http://10.30.4.110:3000/api/picture/getPictureByTagsOr';
+  private url = 'http://182.61.43.39:3000/api/picture/getPictureByTagsOr';
   private headers = new Headers({ 'Content-Type': 'application/json' });
   private options = new RequestOptions({ headers: this.headers });
 
@@ -18,6 +18,6 @@ export class QingchunService {
   }
 
   getPictureNumber() {
-    return this.http.get('http://10.30.4.110:3000/api/picture/getPictureNumber?tags=小清新,萌妹').map(res => res.json());
+    return this.http.get('http://182.61.43.39:3000/api/picture/getPictureNumber?tags=小清新,萌妹').map(res => res.json());
   }
 }
