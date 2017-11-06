@@ -18,5 +18,14 @@
             <td><a (click)="viewThisPicture(picture._id)">{{picture.title}}</a></td>
           </tr>
         </tbody>
-      </table>
+    </table>
+    <div>
+        <div class="ui-g-5 ui-lg-3">
+            <button type="button" class="btn btn-outline-primary" (click)="goToLastPage();false">上一页</button>
+        </div>
+        <div class="ui-g-2 ui-lg-6"></div>
+        <div class="ui-g-5 ui-lg-3">
+            <button type="button" class="btn btn-outline-primary" (click)="goToNextPage();false">下一页</button>
+        </div>
+    </div>
 </div>

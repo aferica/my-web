@@ -12,24 +12,52 @@ import { XindongService } from './xindong.service';
 export class XindongComponent implements OnInit {
 
   pictures = [];
-  
-    constructor(
-      private xindongService: XindongService,
-      private router: Router
-    ) { }
-  
-    ngOnInit() {
-      this.getPictures();
-    }
-  
-    getPictures() {
-      this.xindongService.getPictures().subscribe (res=> {
-        this.pictures = res;
-      });
-    }
+  number = 0;
+  page = '1';
 
-    viewThisPicture(id) {
-      // console.log(id);
-      this.router.navigate(['/image/view', {id: id}]);
+  constructor(
+    private xindongService: XindongService,
+    private router: Router
+  ) { }
+
+  ngOnInit() {
+    this.page = '';
+    let url_page = this.router.url.replace(/[^0-9]/ig,"");
+    if(url_page!='') {
+      this.page = url_page;
     }
+    this.getPictures(this.page);
+  }
+
+  getPictures(page) {
+    if(page == null || page == '')
+      page = 1;
+    this.xindongService.getPictures(page).subscribe (res=> {
+      // console.log(res);
+      this.pictures = [];
+      this.pictures = res;
+    });
+  }
+
+  viewThisPicture(id) {
+    // console.log(id);
+    this.router.navigate(['/image/view', {id: id}]);
+  }
+
+  goToLastPage() {
+    let temp = 1;
+    if (this.page!='1')
+      temp = parseInt(this.page) - 1
+    this.router.navigate(['/image/xinggan/' + temp]);
+    this.getPictures(temp);
+    this.page = temp.toString();
+  }
+
+  goToNextPage() {
+    let temp = 1;
+    temp = parseInt(this.page) + 1
+    this.router.navigate(['/image/xianggan/' + temp]);
+    this.getPictures(temp);
+    this.page = temp.toString();
+  }
 }
