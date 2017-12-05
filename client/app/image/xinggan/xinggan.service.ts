@@ -7,7 +7,7 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class XingganService {
 
-  private url = 'http://182.61.43.39:3000/api/picture/getPictureByTagsOr';
+  private url = 'http://39.108.63.38:3000/api/picture/getPictureByTagsOr';
   private headers = new Headers({ 'Content-Type': 'application/json'});
   private options = new RequestOptions({ headers: this.headers });
 

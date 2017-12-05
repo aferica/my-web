@@ -1,6 +1,6 @@
 {
   "/api": {
-    "target": "http://182.61.43.39:3000",
+    "target": "http://39.108.63.38:3000",
     "secure": false
   },
   "/book": {
